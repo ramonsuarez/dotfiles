@@ -1,6 +1,3 @@
-# Ignore all files in home, force with -f to add
-~/*
-
 # Mac OSX Finder hidden files
 .DS_Store
 
