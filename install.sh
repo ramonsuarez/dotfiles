@@ -44,8 +44,6 @@ if [[ ! `uname` =~ "darwin" ]]; then
   echo 'export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"' >> zshrc
 else
   git config --global core.editor "'/usr/bin/atom' --wait"
-#  bundler_editor="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-#  echo "export BUNDLER_EDITOR=\"${bundler_editor}\"" >> zshrc
 fi
 
 # Sublime Text
@@ -61,5 +59,3 @@ ln -s $PWD/Preferences.sublime-settings $SUBL_PATH/Packages/User/Preferences.sub
 ln -s $PWD/Package\ Control.sublime-settings $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
 
 zsh ~/.zshrc
-
-echo "👌  Set up Git now"
