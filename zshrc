@@ -7,8 +7,8 @@ ZSH_THEME="geoffgarside"
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
 
-# Add conda to path
-export PATH=~/anaconda/bin:$PATH
+# Add miniconda to path
+export PATH=~/miniconda3/bin:$PATH
 
 
 # Store your own aliases in the ~/.aliases file and load the here.
