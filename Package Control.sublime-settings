@@ -10,13 +10,10 @@
 		"ApplySyntax",
 		"BracketHighlighter",
 		"Emmet",
-		"ERB Snippets",
 		"Git",
 		"GitGutter",
-		"Jekyll",
 		"JSX",
 		"Package Control",
-		"RuboCop",
 		"SCSS"
 	]
 }

@@ -4,6 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="geoffgarside"
 
+<<<<<<< HEAD
 # Add ruby version on prompt (float right)
 # if [ -x "$(command -v rbenv)" ]; then RPS1='[$(ruby_prompt_info)]$EPS1'; fi
 
@@ -17,7 +18,7 @@ source "${ZSH}/oh-my-zsh.sh"
 # So instead of running `bin/rails` like the doc says, just run `rails`
 # export PATH="./bin:${PATH}:/usr/local/sbin"
 
-# Path to miniconda anaconda install so that it is remembered between sessions
+# Add miniconda to path
 export PATH=~/miniconda3/bin:$PATH
 
 # Store your own aliases in the ~/.aliases file and load the here.
@@ -32,5 +33,8 @@ export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"
 # export LFS=/media/ramon/lfscratch
 # export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
 # export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
+<<<<<<< HEAD
 # export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
 # export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
+=======
+>>>>>>> 70d467babf3000411508d62e7a6b34dea159d01e
