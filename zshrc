@@ -17,6 +17,9 @@ source "${ZSH}/oh-my-zsh.sh"
 # So instead of running `bin/rails` like the doc says, just run `rails`
 export PATH="./bin:${PATH}:/usr/local/sbin"
 
+# Path to miniconda anaconda install so that it is remembered between sessions
+export PATH=~/miniconda3/bin:$PATH
+
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
@@ -27,5 +30,7 @@ export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"
 
 # Add environment variable for Linux from scratch
 # export LFS=/media/ramon/lfscratch
+export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
+export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
 export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
 export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"

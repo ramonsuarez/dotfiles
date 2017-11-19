@@ -1,5 +1,5 @@
 " Activate pathogen
-" If error install it
+" If error install it manually
 call pathogen#infect()
 
 " Standard vim config
@@ -13,9 +13,7 @@ else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
-" VIM Configuration - Vincent Jousse
-" Cancel the compatibility with Vi. Essential if you want
-" to enjoy the features of Vim
+" Cancel the compatibility with Vi.
 set nocompatible
 
 " -- Display
@@ -55,16 +53,28 @@ filetype plugin on
 filetype indent on
 
 " Use the dark version of elflord 
- set background=dark
- colorscheme elflord 
+" set background=dark
+" colorscheme elflord 
+
+" Use ron colorscheme
+colorscheme ron
 
 " Change font
 " Use the dark version of Solarized
 set guifont=DejaVu\ Sans\ Mono\ 10
 set antialias
 
-" Activate the NERDTree when launching vim
-" autocmd vimenter * NERDTree
+
+" netrw configuration like nerdtree
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 25
+" augroup ProjectDrawer
+"       autocmd!
+"         autocmd VimEnter * :Vexplore
+" augroup END
 
 " Disabling the directional keys
 " map <up> <nop>
@@ -95,18 +105,18 @@ set antialias
 " :imap <M-Space> <Esc>
 
 " Key binging for lusty-explorer
-let mapleader=","
+" let mapleader=","
 
-" Default params for ack
-let g:ackprg="ack -H --nocolor --nogroup --column"
-" Add a mark and search
-nmap <leader>j mA:Ack<space>
-" Add a mark and search for the word under the cursor
-nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
-nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
-
+" " Default params for ack
+" let g:ackprg="ack -H --nocolor --nogroup --column"
+" " Add a mark and search
+" nmap <leader>j mA:Ack<space>
+" " Add a mark and search for the word under the cursor
+" nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
+" nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
+ 
 " Shortcu for CtrlP
-let g:ctrlp_map = '<leader>c'
+" let g:ctrlp_map = '<leader>c'
 
 " Defaults syntastic
 set statusline+=%#warningmsg#
@@ -118,5 +128,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Activate neocomplete
-let g:neocomplete#enable_at_startup = 1
+" Suppress startup message LycosaExplorer
+let g:LycosaExplorerSuppressPythonWarning = 1
+
+" Recommended settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
