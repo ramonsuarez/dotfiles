@@ -18,7 +18,7 @@ set nocompatible
 
 " Spell check languages
 set spell 
-set spelllang=en,es,fr
+set spelllang=en
 
 
 " -- Display
