@@ -1,5 +1,5 @@
-" Activate pathogen
-" If error install it
+" Activate pathogen for plugin management
+" If you get an error> install it
 call pathogen#infect()
 
 " Standard vim config
@@ -13,10 +13,13 @@ else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
-" VIM Configuration - Vincent Jousse
-" Cancel the compatibility with Vi. Essential if you want
-" to enjoy the features of Vim
+" Cancel the compatibility with Vi
 set nocompatible
+
+" Spell check languages
+set spell 
+set spelllang=en,es,fr
+
 
 " -- Display
 set title                 " Update the title of your window or your terminal
@@ -119,4 +122,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Activate neocomplete
-let g:neocomplete#enable_at_startup = 1
+" let g:neocomplete#enable_at_startup = 1
