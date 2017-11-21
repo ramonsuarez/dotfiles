@@ -23,3 +23,4 @@ export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1"
 # export LFS=/media/ramon/lfscratch
 # export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
 # export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"
+export BUNDLER_EDITOR="vim $@ >/dev/null 2>&1"

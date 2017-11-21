@@ -40,10 +40,10 @@ cd "$CURRENT_DIR"
 
 setopt nocasematch
 if [[ ! `uname` =~ "darwin" ]]; then
-  git config --global core.editor "atom --wait $@ >/dev/null 2>&1"
-  echo 'export BUNDLER_EDITOR="atom $@ >/dev/null 2>&1"' >> zshrc
+  git config --global core.editor "vim"
+  echo 'export BUNDLER_EDITOR="vim"' >> zshrc
 else
-  git config --global core.editor "'/usr/bin/atom' --wait"
+  git config --global core.editor "vim"
 fi
 
 # Sublime Text
