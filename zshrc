@@ -10,7 +10,7 @@ source "${ZSH}/oh-my-zsh.sh"
 # Add miniconda to path
 export PATH=~/miniconda3/bin:$PATH
 
-# Store your own aliases in the ~/.aliases file and load the here.
+# Store your own aliases in the ~/.aliases file and load them
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 # Encoding stuff for the terminal
