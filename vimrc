@@ -9,12 +9,8 @@ set nocompatible
 " to another buffer
 set hidden
 
-" Enable file specific behavior like syntax highlighting and indentation
-filetype on
-filetype plugin on
-filetype indent on
-" Standard vim config
 
+" Standard vim config
 syntax on
 set backspace=indent,eol,start
 set tabstop=4 shiftwidth=4 expandtab
@@ -60,10 +56,6 @@ set hlsearch              " Highlight search results
 set visualbell            " Prevent Vim from beeping
 set noerrorbells          " Prevent Vim from beeping
 
-" Enable syntax highlighting
-syntax enable
-
-
 " Use ron colorscheme
 colorscheme ron
 
@@ -85,13 +77,21 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " Press the j 2 times in row
 :imap jj <Esc>
 
+" Enable syntax highlighting
+syntax enable
+
+" Enable file specific behavior like syntax highlighting and indentation
+filetype on
+filetype plugin on
+filetype indent on
+
 " Suppress startup message LycosaExplorer
 let g:LycosaExplorerSuppressPythonWarning = 1
 
 " Recommended settings for Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -99,5 +99,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Add Syntastic language checkers
-let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_python_checkers = ['pylint']
 
+" Show file name in status line
+set laststatus=2
+set statusline=%f
