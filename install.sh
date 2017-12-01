@@ -38,7 +38,7 @@ if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
 fi
 cd "$CURRENT_DIR"
 
-setopt nocasematch
+# setopt nocasematch
 if [[ ! `uname` =~ "darwin" ]]; then
   git config --global core.editor "vim"
   echo 'export BUNDLER_EDITOR="vim"' >> zshrc
