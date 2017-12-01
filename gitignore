@@ -1,3 +1,10 @@
+# Vim swap files
+*.swp
+*.swo
+
+# Gedit temp files
+*~
+
 # Mac OSX Finder hidden files
 .DS_Store
 
