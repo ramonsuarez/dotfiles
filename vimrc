@@ -13,7 +13,7 @@ set hidden
 " Standard vim config
 syntax on
 set backspace=indent,eol,start
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 softtabstop=0 shiftwidth=2 expandtab smarttab
 if has("multi_byte")
   set encoding=utf-8
   setglobal fileencoding=utf-8
