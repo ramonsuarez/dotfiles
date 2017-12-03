@@ -16,3 +16,10 @@ export PATH=~/miniconda3/bin:$PATH
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Plugins
+plugins=(
+        zsh-autosuggestions
+        ,)
