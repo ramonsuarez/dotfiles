@@ -1,3 +1,5 @@
+" Make Bash default shell
+:set shell=/bin/bash
 " Activate pathogen
 " If error install it manually
 call pathogen#infect()
