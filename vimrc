@@ -1,5 +1,8 @@
 " Make Bash default shell
 :set shell=/bin/bash
+" Set python3 by default for omni complete
+autocmd FileType python set omnifunc=python3complete#Complete
+
 " Activate pathogen
 " If error install it manually
 call pathogen#infect()
@@ -88,17 +91,17 @@ filetype plugin on
 filetype indent on
 
 " Suppress startup message LycosaExplorer
-let g:LycosaExplorerSuppressPythonWarning = 1
+" let g:LycosaExplorerSuppressPythonWarning = 1
 
 " Recommended settings for Syntastic
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " Add Syntastic language checkers
 " let g:syntastic_python_checkers = ['pylint']
