@@ -23,3 +23,4 @@ eval "$(rbenv init -)"
 plugins=(
         zsh-autosuggestions
         ,)
+source $HOME/.zshenv
