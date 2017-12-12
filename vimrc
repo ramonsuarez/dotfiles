@@ -1,5 +1,8 @@
-" Set bash as shell
-set shell=/bin/bash
+" Make Bash default shell
+:set shell=/bin/bash
+
+" Set python3 by default for omni complete
+autocmd FileType python set omnifunc=python3complete#Complete
 
 " Activate pathogen
 " If error install it manually
@@ -12,7 +15,6 @@ set nocompatible
 " to another buffer
 set hidden
 
-
 " Standard vim config
 syntax on
 set backspace=indent,eol,start
@@ -24,13 +26,16 @@ else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
-
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+" Show file name in status line
+set laststatus=2
+set statusline=%f
 
 " -- Display
 set title                 " Update the title of your window or your terminal
@@ -87,14 +92,11 @@ filetype indent on
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " Add Syntastic language checkers
 " let g:syntastic_python_checkers = ['pylint']
 
-" Show file name in status line
-set laststatus=2
-set statusline=%f
