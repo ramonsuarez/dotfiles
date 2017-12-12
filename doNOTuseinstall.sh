@@ -1,5 +1,6 @@
 # Backup config files if they exist
-# TODO  What about the .vim directory?
+# TODO  Add script to include .vim folder, backup old and link to new in dotfiles folder
+
 backup() {
   target=$1
   if [ -e "$target" ]; then           # Does the config file already exist?
