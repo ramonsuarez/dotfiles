@@ -1,3 +1,6 @@
+" Set bash as shell
+set shell=/bin/bash
+
 " Activate pathogen
 " If error install it manually
 call pathogen#infect()
@@ -29,11 +32,6 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
-" Spell check languages
-" set spell 
-" set spelllang=en
-
-
 " -- Display
 set title                 " Update the title of your window or your terminal
 set number                " Display line numbers
@@ -60,14 +58,13 @@ set noerrorbells          " Prevent Vim from beeping
 colorscheme ron
 
 " Change font
-" Use the dark version of Solarized
 set guifont=DejaVu\ Sans\ Mono\ 10
 set antialias
 
 
 " netrw configuration
-let g:netrw_banner=0        " disable banner
-let g:netrw_browse_split=4  " open in prior window
+" let g:netrw_banner=0        " disable banner
+let g:netrw_browse_split=0  " open in prior window
 let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
@@ -84,9 +81,6 @@ syntax enable
 filetype on
 filetype plugin on
 filetype indent on
-
-" Suppress startup message LycosaExplorer
-let g:LycosaExplorerSuppressPythonWarning = 1
 
 " Recommended settings for Syntastic
 " set statusline+=%#warningmsg#
