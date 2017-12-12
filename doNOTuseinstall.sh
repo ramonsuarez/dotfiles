@@ -3,19 +3,19 @@
 
 backup() {
   target=$1
-  if [ -e "$target" ]; then           # Does the config file already exist?
-    if [ ! -L "$target" ]; then       # as a pure file?
+  if [ -e "$target"] || [ -d "$target" ]; then           # Does the config file/dir already exist?
+    if [ ! -L "$target" ]; then       # a a pure file?
       mv "$target" "$target.backup"   # Then backup it
-      echo "-----> Moved your old $target config file to $target.backup"
+      echo "-----> Moved your old $target config file or directory to $target.backup"
     fi
   fi
 }
 
 #!/bin/bash
 for name in *; do
-  if [ ! -d "$name" ]; then
+#  if [ ! -d "$name" ]; then
     target="$HOME/.$name"
-    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ]; then
+    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [ "$name" != 'tags' ]; then
       backup $target
 
       if [ ! -e "$target" ]; then
@@ -23,9 +23,5 @@ for name in *; do
         ln -s "$PWD/$name" "$target"
       fi
     fi
-  fi
+#  fi
 done
-
-REGULAR="\\033[0;39m"
-YELLOW="\\033[1;33m"
-GREEN="\\033[1;32m"
