@@ -26,6 +26,9 @@ else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
+" Enable autocomplete
+set omnifunc=syntaxcomplete#Complete
+
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
