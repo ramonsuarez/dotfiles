@@ -51,3 +51,5 @@
 	name = Ramon Suarez
 [credential]
 	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
