@@ -82,6 +82,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " Key mapping alternatives to ESC key
 " Press the j 2 times in row
 :imap jj <Esc>
+:imap JJ <Esc>
 
 " Enable syntax highlighting
 syntax enable
