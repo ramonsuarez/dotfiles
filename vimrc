@@ -43,7 +43,7 @@ set statusline=%f
 " -- Display
 set title                 " Update the title of your window or your terminal
 set number                " Display line numbers
-set relativenumber        " Display relative line numbers
+" set relativenumber        " Display relative line numbers
 set ruler                 " Display cursor position
 set wrap                  " Wrap lines when they are too long
 
