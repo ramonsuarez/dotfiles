@@ -111,7 +111,7 @@ let g:user_emmet_settings = {
       \   'extends' : 'html', 
       \   },
       \}
-" Automatically update ctags when file is written
+" Automatically update ctags when file is written http://vim.wikia.com/wiki/Autocmd_to_update_ctags_file
 function! DelTagOfFile(file)
   let fullpath = a:file
   let cwd = getcwd()
