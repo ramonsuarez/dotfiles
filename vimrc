@@ -1,12 +1,12 @@
-" Make Bash default shell
-:set shell=/bin/bash
+  " Make Bash default shell
+  :set shell=/bin/bash
 
-" Set python3 by default for omni complete
-autocmd FileType python set omnifunc=python3complete#Complete
+  " Set python3 by default for omni complete
+  autocmd FileType python set omnifunc=python3complete#Complete
 
-" Activate pathogen
-" If error install it manually
-call pathogen#infect()
+  " Activate pathogen
+  " If error install it manually
+  call pathogen#infect()
 
 " Cancel the compatibility with Vi
 set nocompatible
@@ -105,3 +105,29 @@ filetype indent on
 " Add Syntastic language checkers
 " let g:syntastic_python_checkers = ['pylint']
 
+" Emmet languages to autocomplete
+let g:user_emmet_settings = {
+      \ 'python' : {
+      \   'extends' : 'html', 
+      \   },
+      \}
+" Automatically update ctags when file is written
+function! DelTagOfFile(file)
+  let fullpath = a:file
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let f = substitute(fullpath, cwd . "/", "", "")
+  let f = escape(f, './')
+  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+  let resp = system(cmd)
+endfunction
+
+function! UpdateTags()
+  let f = expand("%:p")
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
+  call DelTagOfFile(f)
+  let resp = system(cmd)
+endfunction
+autocmd BufWritePost *.cpp,*.h,*.c call UpdateTags()
