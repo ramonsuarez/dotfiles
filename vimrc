@@ -25,6 +25,10 @@ if has("multi_byte")
 else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
+" Python tabs and shift
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
 
 " Enable autocomplete
 set omnifunc=syntaxcomplete#Complete
