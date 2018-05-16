@@ -1,12 +1,12 @@
-  " Make Bash default shell
-  :set shell=/bin/bash
+" Make Bash default shell
+:set shell=/bin/bash
 
-  " Set python3 by default for omni complete
-  autocmd FileType python set omnifunc=python3complete#Complete
+" Set python3 by default for omni complete
+autocmd FileType python set omnifunc=python3complete#Complete
 
-  " Activate pathogen
-  " If error install it manually
-  call pathogen#infect()
+" Activate pathogen
+" If error install it manually
+call pathogen#infect()
 
 " Cancel the compatibility with Vi
 set nocompatible
@@ -25,6 +25,10 @@ if has("multi_byte")
 else
   echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
+" Python tabs and shift
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
 
 " Enable autocomplete
 set omnifunc=syntaxcomplete#Complete
@@ -48,14 +52,14 @@ set ruler                 " Display cursor position
 set wrap                  " Wrap lines when they are too long
 
 set scrolloff=3           " Display at least 3 lines around you cursor
-                          " (for scrolling)
+" (for scrolling)
 
 set guioptions=T          " Enable the toolbar
 
 " -- Search
 set ignorecase            " Ignore case when searching
 set smartcase             " If there is an uppercase in your search term
-                          " search case sensitive again
+" search case sensitive again
 set incsearch             " Highlight search results when typing
 set hlsearch              " Highlight search results
 
