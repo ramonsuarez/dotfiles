@@ -181,8 +181,3 @@
 	}
  
 	export PS1="\A \W \`parse_git_branch\`\\$ "
-
-    # pyenv path 
-    export PATH="~/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
