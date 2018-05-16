@@ -57,14 +57,14 @@ set scrolloff=3           " Display at least 3 lines around you cursor
 set guioptions=T          " Enable the toolbar
 
 " -- Search
-set ignorecase            " Ignore case when searching
+" set ignorecase            " Ignore case when searching
 set smartcase             " If there is an uppercase in your search term
 " search case sensitive again
 set incsearch             " Highlight search results when typing
 set hlsearch              " Highlight search results
 
 " -- Beep
-set visualbell            " Prevent Vim from beeping
+set novisualbell          " Remove screen highlight when error
 set noerrorbells          " Prevent Vim from beeping
 
 " Use ron colorscheme
