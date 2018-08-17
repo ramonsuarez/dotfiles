@@ -126,8 +126,6 @@
     fi
     export PATH="$HOME/.local/bin:$PATH"
 
-    # added by Miniconda3 installer
-    export PATH="/home/ramon/miniconda3/bin:$PATH"
     export PATH="$HOME/.rbenv/bin:$PATH"
 	eval "$(rbenv init -)"
 	export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
@@ -181,3 +179,4 @@
 	}
  
 	export PS1="\A \W \`parse_git_branch\`\\$ "
+. /home/ramon/miniconda3/etc/profile.d/conda.sh
