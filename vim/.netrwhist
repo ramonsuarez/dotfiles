@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/ramon'
 let g:netrw_dirhist_2='/home/ramon/dev/peventinary'
 let g:netrw_dirhist_3='/usr/share/vim/vim80/doc'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/usr/share/vim/vim80'
 let g:netrw_dirhist_5='/usr/share/vim'
 let g:netrw_dirhist_6='/usr/share'
 let g:netrw_dirhist_7='/usr'
+let g:netrw_dirhist_8='/home/ramon/dev/olympicpistol/content/blog/training'
